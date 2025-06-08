@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+</style>
+<div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+    <form class="form fade-in" action="{{ url_for('register') }}" method="POST" style="width: 350px; border-radius: 10px; padding: 30px; background: white;">
+        <div class="header" style="font-size: 24px; font-weight: 700; margin-bottom: 20px; text-align: center;">Sign Up</div>
+        <div class="inputs">
+            <input placeholder="Name" class="input" type="text" name="name" required>
+            <input placeholder="Email" class="input" type="email" name="email" required>
+            <input placeholder="Password" class="input" type="password" name="password" required>
+        </div>
+        <button class="signup-btn" type="submit" style="margin-top: 20px;">Submit</button>
+        <p class="signup-link" style="margin-top: 20px; text-align: center;">Already have an account? <a href="{{ url_for('login')}}">Sign In</a></p>
+    </form>
+</div>
+{% endblock %}

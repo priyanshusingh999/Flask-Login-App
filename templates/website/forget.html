@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- From Uiverse.io by gharsh11032000 --> 
+    <div class="form-container">
+      <div class="logo-container">
+        Forgot Password
+      </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form class="form" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required="">
+        </div>
+
+        <button class="form-submit-btn" type="submit">Send Email</button>
+      </form>
+
+      <p class="signup-link">
+        Don't have an account?
+        <a href="{{ url_for('register')}}" class="signup-link link"> Sign up now</a>
+      </p>
+    </div>
+{% endblock %}

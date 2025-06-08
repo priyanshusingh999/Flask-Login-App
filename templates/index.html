@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %} Home Page{% endblock  %}
+
+{% block contant %}
+<style>
+.loader-container {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+</style>
+
+<div class="loader-container">
+    <!-- From Uiverse.io by faxriddin20 --> 
+    <div class="loader">
+    <svg viewBox="0 0 80 80">
+        <circle r="32" cy="40" cx="40" id="test"></circle>
+    </svg>
+    </div>
+
+    <div class="loader triangle">
+    <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+    </svg>
+    </div>
+
+    <div class="loader">
+    <svg viewBox="0 0 80 80">
+        <rect height="64" width="64" y="8" x="8"></rect>
+    </svg>
+    </div>
+</div>
+
+{% endblock  %}
