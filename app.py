@@ -8,7 +8,7 @@ import time
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
-app.secret_key = '{SECRET_KEY}'
+app.secret_key = f'{SECRET_KEY}'
 
 class Register_Info(db.Model):
     name = db.Column(db.String(15), nullable=False, primary_key=True)

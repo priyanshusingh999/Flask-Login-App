@@ -8,8 +8,8 @@ def send_yandex_email(receiver_email, password):
         # Yandex SMTP Configuration
         smtp_server = "smtp.yandex.com"
         port = 465  # SSL ke liye
-        sender_email = "{EMAIL_ID}"
-        sender_password = "{PASSWORD_ID}"  # Yandex password
+        sender_email = f"{EMAIL_ID}"
+        sender_password = f"{PASSWORD_ID}"  # Yandex password
         
         subject = "Password Reset Email"
         body = f"""

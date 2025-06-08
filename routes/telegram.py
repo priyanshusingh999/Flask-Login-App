@@ -2,8 +2,8 @@ import requests, time
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
 # Telegram bot token and chat ID placeholders - replace with your actual values
-TELEGRAM_BOT_TOKEN = "{TELEGRAM_BOT_TOKEN}"
-TELEGRAM_CHAT_ID = "{TELEGRAM_CHAT_ID}"
+TELEGRAM_BOT_TOKEN = f"{TELEGRAM_BOT_TOKEN}"
+TELEGRAM_CHAT_ID = f"{TELEGRAM_CHAT_ID}"
 
 def send_telegram_message(name, email, message, msg_time):
     text = f"<b>Contact Form Submission</b>\n\nName: {name}\n\nEmail: {email}\n\nMessage: {message}\n\nTime: {msg_time}"
